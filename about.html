@@ -42,7 +42,7 @@
         <a href="about.html">عنا</a>
         <a href="refs.html">المراجع</a>
       </nav>
-      <button class="dark-toggle" onclick="toggleDark()" id="themeBtn">
+      <button id="theme-toggle" class="dark-toggle" onclick="toggleDark()">
         🌙
       </button>
     </header>
@@ -104,18 +104,36 @@
     <footer>جميع الحقوق محفوظة © حركة لسان 2025</footer>
 
     <script>
-      function toggleDark() {
-        const body = document.body;
-        const btn = document.getElementById("themeBtn");
-        body.classList.toggle("dark-mode");
+      function updateThemeIcon() {
+        const themeButton = document.getElementById("theme-toggle");
 
-        // تغيير الأيقونة بناءً على الوضع
-        if (body.classList.contains("dark-mode")) {
-          btn.innerText = "☀️";
+        if (document.documentElement.classList.contains("dark-mode")) {
+          themeButton.textContent = "☀️";
         } else {
-          btn.innerText = "🌙";
+          themeButton.textContent = "🌙";
         }
       }
+
+      function toggleDark() {
+        document.documentElement.classList.toggle("dark-mode");
+
+        if (document.documentElement.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+
+        updateThemeIcon();
+      }
+
+      document.addEventListener("DOMContentLoaded", updateThemeIcon);
+
+      (() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
     </script>
   </body>
 </html>

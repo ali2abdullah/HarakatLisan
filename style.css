@@ -30,13 +30,13 @@
       flex-direction: column;
     }
 
-    body.dark-mode {
+    html.dark-mode body {
       background: var(--dark-bg) url('imgs/bg-pattern.png') repeat;
       color: var(--dark-text);
     }
 
-    body.dark-mode header,
-    body.dark-mode footer {
+    html.dark-mode header,
+    html.dark-mode footer {
         background: var(--dark-navbar);
     }
 
@@ -81,7 +81,7 @@
       flex: 1; /* يخلي المحتوى يتمدد ويدفع الفوتر لأسفل */
     }
 
-    body.dark-mode .container {
+    html.dark-mode .container {
       background: var(--dark-card);
     }
 
@@ -183,16 +183,16 @@
 }
 
 /* Dark mode */
-body.dark-mode .faq-item {
+html.dark-mode .faq-item {
   background: var(--dark-card);
 }
 
-body.dark-mode .faq-answer {
+html.dark-mode .faq-answer {
   background: #2a2a2a;   /* slightly lighter than full dark bg */
   color: var(--dark-text);
 }
 
-body.dark-mode .faq-question {
+html.dark-mode .faq-question {
   color: var(--dark-text);
 }
 
@@ -239,7 +239,7 @@ body.dark-mode .faq-question {
   color: #2c7a7b;
 }
 
-.dark-mode .zikr-title {
+html.dark-mode .zikr-title {
   color: #90cdf4;
 }
 
@@ -298,13 +298,13 @@ body.dark-mode .faq-question {
 }
 
 /* Dark mode */
-body.dark-mode .zikr-fadhl {
+html.dark-mode .zikr-fadhl {
   color: var(--dark-text);
   background: rgba(255,255,255,0.05);
   border-left: 3px solid var(--accent);
 }
 
-    body.dark-mode .zikr-card {
+    html.dark-mode .zikr-card {
       background: var(--dark-card);
     }
 
@@ -380,7 +380,7 @@ body.dark-mode .zikr-fadhl {
   max-width: 300px;
 }
 
-body.dark-mode .profile-card {
+html.dark-mode .profile-card {
   background: var(--dark-card);
 }
 
@@ -416,7 +416,7 @@ body.dark-mode .profile-card {
   text-align: right;
 }
 
-body.dark-mode .contact-info {
+html.dark-mode .contact-info {
   border-top-color: rgba(255,255,255,0.1);
 }
 
@@ -431,7 +431,7 @@ body.dark-mode .contact-info {
   transition: color 0.2s;
 }
 
-body.dark-mode .contact-item {
+html.dark-mode .contact-item {
   color: var(--dark-text);
 }
 
@@ -452,7 +452,7 @@ body.dark-mode .contact-item {
   font-size: 1.1rem;
 }
 
-body.dark-mode .sub-title {
+html.dark-mode .sub-title {
   color: var(--dark-text);
 }
 
@@ -481,7 +481,7 @@ body.dark-mode .sub-title {
 }
 
 /* 4. تحسين شكل الأزرار في الوضع الليلي */
-body.dark-mode button {
+html.dark-mode button {
   background: var(--accent);
   color: white;
 }
@@ -520,6 +520,6 @@ body.dark-mode button {
   font-size: 16px;
 }
 
-body.dark-mode .refs-list li {
+html.dark-mode .refs-list li {
   background: var(--dark-card);
 }
